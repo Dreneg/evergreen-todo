@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: app_db
+
+  parse-server:
+    image: parseplatform/parse-server:4.5.0
+    restart: always
+    ports:
+      - "1337:1337"
+    environment:
+      PARSE_SERVER_APPLICATION_ID: ${PARSE_APP_ID}
+      PARSE_SERVER_MASTER_KEY: ${PARSE_MASTER_KEY}
+      PARSE_SERVER_DATABASE_URI: postgres://${DB_USER}:${DB_PASSWORD}@db:5432/app_db
+    depends_on: 
+      - db
+
+  parse-dashboard:
+    image: parseplatform/parse-dashboard:2.0.5
+    restart: always
+    ports:
+      - "4040:4040"
+    environment:
+      PARSE_DASHBOARD_APP_ID: ${PARSE_APP_ID}
+      PARSE_DASHBOARD_MASTER_KEY: ${PARSE_MASTER_KEY}
+      PARSE_DASHBOARD_USER_ID: ${DASHBOARD_USER}
+      PARSE_DASHBOARD_USER_PASSWORD: ${DASHBOARD_PASSWORD}
+      PARSE_DASHBOARD_ALLOW_INSECURE_HTTP: "true"
+      PARSE_DASHBOARD_SERVER_URL: http://localhost:1337/parse
+    depends_on: 
+      - parse-server
