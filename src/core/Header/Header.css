@@ -1,5 +1,10 @@
 .header {
-  min-height: 2rem;
+  min-height: 2.5rem;
   background-color: var(--theme-dark-backgroud);
   color: var(--theme-dark-foreground);
+  font-size: 1.34em;
+}
+
+.header .icon {
+  font-size: 1.3rem;
 }
