@@ -1,0 +1,5 @@
+.header {
+  min-height: 2rem;
+  background-color: var(--theme-dark-backgroud);
+  color: var(--theme-dark-foreground);
+}

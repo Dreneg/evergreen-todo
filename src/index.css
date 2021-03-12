@@ -1,10 +1,20 @@
+:root {
+  --theme-mid-backgroud: #00796b;
+  --theme-mid-foreground: #e2e2e2;
+  --theme-light-backgroud: #48a999;
+  --theme-light-foreground: #141414;
+  --theme-dark-backgroud: #004c40;
+  --theme-dark-foreground: #d4d4d4;
+  --theme-page-background: var(--light-theme-mid-foreground);
+  --theme-page-font-color: var(--light-theme-light-foreground);
+}
+
 body {
   margin: 0;
   font-family: Roboto, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: var(--theme-page-background);
+  color: var(--theme-page-font-color);
 }
