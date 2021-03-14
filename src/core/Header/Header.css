@@ -1,8 +1,8 @@
 .header {
-  min-height: 2.5rem;
-  background-color: var(--theme-dark-backgroud);
-  color: var(--theme-dark-foreground);
-  font-size: 1.34em;
+  height: var(--header-height);
+  background-color: var(--theme-mid-backgroud);
+  color: var(--theme-mid-foreground);
+  font-size: 1.3em;
 }
 
 .header .icon {

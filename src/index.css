@@ -4,9 +4,16 @@
   --theme-light-backgroud: #48a999;
   --theme-light-foreground: #141414;
   --theme-dark-backgroud: #004c40;
-  --theme-dark-foreground: #d4d4d4;
+  --theme-dark-foreground: #a7a7a7;
   --theme-page-background: var(--light-theme-mid-foreground);
   --theme-page-font-color: var(--light-theme-light-foreground);
+
+  --header-height: 2.5rem;
+
+  --animation-speed-slow: 1.0s;
+  --animation-speed-medium: 0.5s;
+  --animation-speed-fast: 0.25s;
+
 }
 
 body {

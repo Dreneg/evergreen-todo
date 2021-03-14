@@ -1,0 +1,58 @@
+.side-navigation {
+  height: 100%;
+  position: fixed;
+  top: var(--header-height);;
+  left: 0;
+  z-index: 1;
+  background-color: var(--theme-dark-backgroud);
+  overflow-x: hidden;
+  transition: var(--animation-speed-medium);
+  padding-top: 2.8rem;
+}
+
+.side-navigation .navigation-item {
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--theme-dark-foreground);
+  display: block;
+  transition: var(--animation-speed-fast);
+  cursor: pointer;
+  user-select: none;
+}
+
+.side-navigation .navigation-item.expanded {
+  transform-origin: left;
+}
+
+.side-navigation .navigation-item:hover {
+  color: var(--theme-mid-foreground);
+  transform: scale(1.1);
+}
+
+.side-navigation .navigation-item.menu-item {
+  padding: 0.2rem 0.2rem 0.2rem 0.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.side-navigation .navigation-item.menu-item .icon {
+  margin-right: 0.4rem;
+}
+
+.side-navigation .navigation-item.menu-item .caption {
+  opacity: 1;
+  transition: var(--animation-speed-fast);
+}
+
+.side-navigation .navigation-item.menu-item.collapsed .caption {
+  opacity: 0;
+}
+
+.side-navigation .expand-button,
+.side-navigation .collapse-button {
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  font-size: 1.8rem;
+}
