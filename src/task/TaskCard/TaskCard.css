@@ -1,0 +1,48 @@
+.task-card {
+  position: relative;
+  min-width: 10rem;
+  max-width: 20rem;
+  margin: 1rem;
+  padding: 0.4rem;
+  height: 6rem;
+  border: 1px solid var(--theme-dark-backgroud);
+  overflow: hidden;
+  color: var(--theme-light-foreground);
+  cursor: pointer;
+  user-select: none;
+}
+
+.task-card:hover {
+  background-color: #60e9d24b;
+  outline: 1px solid var(--theme-dark-backgroud);
+}
+
+.task-card .title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}
+
+.task-card .description {
+  font-size: smaller;
+}
+
+.task-card .type-icon {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.2rem;
+  font-size: 1.3rem;
+}
+
+.task-card .type-icon.bug {
+  color: rgb(184, 12, 12);
+}
+
+.task-card .type-icon.task {
+  color: rgb(12, 12, 184);
+}
+
+.task-card .type-icon.story {
+  color: rgb(1, 92, 1);
+}
