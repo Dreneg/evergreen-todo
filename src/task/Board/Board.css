@@ -1,5 +1,6 @@
 .board .column-caption {
   border-bottom: 1px solid #a1a1a1;
+  user-select: none;
 }
 .board .column {
   border-right: 1px solid var(--theme-dark-backgroud);
