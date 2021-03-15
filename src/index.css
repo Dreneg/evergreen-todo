@@ -5,8 +5,8 @@
   --theme-light-foreground: #141414;
   --theme-dark-backgroud: #004c40;
   --theme-dark-foreground: #a7a7a7;
-  --theme-page-background: var(--light-theme-mid-foreground);
-  --theme-page-font-color: var(--light-theme-light-foreground);
+  --theme-page-background: #f5f5f5;
+  --theme-page-font-color: var(--theme-light-foreground);
 
   --header-height: 2.5rem;
 

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
-import TaskCard from '../../task/TaskCard';
-import { TASK_DATA } from '../../task/TaskMockData';
+import Board from '../../task/Board';
 import Header from '../Header/Header';
 import SideNavigationBar, { NavigationItem } from '../SideNavigationBar';
 import './App.css';
@@ -43,9 +42,7 @@ function App(): JSX.Element {
       <Header></Header>
       <SideNavigationBar items={navigationItems} onSizeChange={onPanelSizeChange}></SideNavigationBar>
       <div className="main-content" ref={mainContent}>
-        {TASK_DATA.map((task) => (
-          <TaskCard key={task.id} task={task}></TaskCard>
-        ))}
+        <Board></Board>
       </div>
     </>
   );

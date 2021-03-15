@@ -1,8 +1,8 @@
 .task-card {
+  display: inline-block;
   position: relative;
-  min-width: 10rem;
-  max-width: 20rem;
-  margin: 1rem;
+  width: 15rem;
+  margin: 0.4rem;
   padding: 0.4rem;
   height: 6rem;
   border: 1px solid var(--theme-dark-backgroud);
@@ -10,11 +10,12 @@
   color: var(--theme-light-foreground);
   cursor: pointer;
   user-select: none;
+  background-color: #ffffff;
 }
 
 .task-card:hover {
-  background-color: #60e9d24b;
-  outline: 1px solid var(--theme-dark-backgroud);
+  background-color: var(--theme-mid-foreground);
+  outline: 1px solid var(--theme-mid-backgroud);
 }
 
 .task-card .title {

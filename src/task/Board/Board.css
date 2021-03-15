@@ -1,0 +1,8 @@
+.board .column-caption {
+  border-bottom: 1px solid #a1a1a1;
+}
+.board .column {
+  border-right: 1px solid var(--theme-dark-backgroud);
+  min-width: 10rem;
+  flex-basis: 0;
+}
