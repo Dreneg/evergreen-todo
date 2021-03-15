@@ -9,24 +9,31 @@ function App(): JSX.Element {
 
   const navigationItems: NavigationItem[] = [
     {
-      icon: 'bi bi-house-door',
-      label: 'Home',
+      icon: 'bi bi-plus-square',
+      label: 'Create',
       command: () => {
-        console.log('Home');
+        console.log('Create');
       },
     },
     {
       icon: 'bi bi-briefcase',
-      label: 'Info',
+      label: 'Backlog',
       command: () => {
-        console.log('Info');
+        console.log('Backlog');
       },
     },
     {
-      icon: 'bi bi-bookmarks',
-      label: 'Credits',
+      icon: 'bi bi-columns',
+      label: 'Board',
       command: () => {
-        console.log('Credits');
+        console.log('Board');
+      },
+    },
+    {
+      icon: 'bi bi-archive',
+      label: 'Archive',
+      command: () => {
+        console.log('Archive');
       },
     },
   ];
