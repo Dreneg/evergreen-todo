@@ -1,40 +1,36 @@
-import React, { useRef } from 'react';
-import Board from '../../task/Board';
+import React, { Suspense, useRef } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import SideNavigationBar, { NavigationItem } from '../SideNavigationBar';
 import './App.css';
 
 function App(): JSX.Element {
   const mainContent = useRef<HTMLDivElement>(null);
+  const LazyBoard = React.lazy(() => import('../../task/Board'));
+  const LazyBacklog = React.lazy(() => import('../../task/Backlog'));
+  const LazyTaskForm = React.lazy(() => import('../../task/TaskForm'));
+  const LazyArchive = React.lazy(() => import('../../task/Archive'));
 
   const navigationItems: NavigationItem[] = [
     {
       icon: 'bi bi-plus-square',
       label: 'Create',
-      command: () => {
-        console.log('Create');
-      },
+      link: '/create',
     },
     {
       icon: 'bi bi-briefcase',
       label: 'Backlog',
-      command: () => {
-        console.log('Backlog');
-      },
+      link: '/backlog',
     },
     {
       icon: 'bi bi-columns',
       label: 'Board',
-      command: () => {
-        console.log('Board');
-      },
+      link: '/',
     },
     {
       icon: 'bi bi-archive',
       label: 'Archive',
-      command: () => {
-        console.log('Archive');
-      },
+      link: '/archive',
     },
   ];
 
@@ -49,7 +45,28 @@ function App(): JSX.Element {
       <Header></Header>
       <SideNavigationBar items={navigationItems} onSizeChange={onPanelSizeChange}></SideNavigationBar>
       <div className="main-content" ref={mainContent}>
-        <Board></Board>
+        <Switch>
+          <Route path="/create">
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyTaskForm />
+            </Suspense>
+          </Route>
+          <Route path="/backlog">
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyBacklog />
+            </Suspense>
+          </Route>
+          <Route path="/archive">
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyArchive />
+            </Suspense>
+          </Route>
+          <Route path="/">
+            <Suspense fallback={<div>Loading...</div>}>
+              <LazyBoard />
+            </Suspense>
+          </Route>
+        </Switch>
       </div>
     </>
   );

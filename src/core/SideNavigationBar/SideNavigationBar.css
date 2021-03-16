@@ -1,3 +1,8 @@
+a {
+  color: var(--theme-dark-foreground);
+  text-decoration: none;
+}
+
 .side-navigation {
   height: 100%;
   position: fixed;
@@ -21,13 +26,13 @@
   user-select: none;
 }
 
-.side-navigation .navigation-item.expanded {
-  transform-origin: left;
+.side-navigation a.active .navigation-item {
+  color: var(--theme-mid-foreground);
 }
 
 .side-navigation .navigation-item:hover {
   color: var(--theme-mid-foreground);
-  transform: scale(1.1);
+  margin-left: 0.3rem;
 }
 
 .side-navigation .navigation-item.menu-item {
