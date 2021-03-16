@@ -1,5 +1,6 @@
 import React, { Suspense, useRef } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import LoadingSpinner from '../../shared/LoadingSpinner';
 import Header from '../Header/Header';
 import SideNavigationBar, { NavigationItem } from '../SideNavigationBar';
 import './App.css';
@@ -47,22 +48,22 @@ function App(): JSX.Element {
       <div className="main-content" ref={mainContent}>
         <Switch>
           <Route path="/create">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <LazyTaskForm />
             </Suspense>
           </Route>
           <Route path="/backlog">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <LazyBacklog />
             </Suspense>
           </Route>
           <Route path="/archive">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <LazyArchive />
             </Suspense>
           </Route>
           <Route path="/">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
               <LazyBoard />
             </Suspense>
           </Route>
