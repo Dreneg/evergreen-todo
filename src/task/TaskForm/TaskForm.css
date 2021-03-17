@@ -115,3 +115,6 @@
   flex-basis: 6rem;
 }
 
+button, .save-button {
+  transition: var(--animation-speed-fast);
+}
