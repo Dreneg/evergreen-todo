@@ -40,8 +40,8 @@ function SideNavigationBar({ items, onSizeChange }: Props): JSX.Element {
     const collapsedStateClassName = collapsed ? 'collapsed' : 'expanded';
     const itemClassName = collapsedStateClassName + ' navigation-item menu-item';
     return (
-      <NavLink to={link} exact={true}>
-        <div key={label} className={itemClassName}>
+      <NavLink key={label} to={link} exact={true}>
+        <div className={itemClassName}>
           <i className={'icon ' + icon}></i>
           <span className="caption">{label}</span>
         </div>

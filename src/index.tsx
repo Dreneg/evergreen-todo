@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'quill/dist/quill.core.css';
+import 'quill/dist/quill.snow.css';
 import './index.css';
 import App from './core/App';
 import reportWebVitals from './reportWebVitals';

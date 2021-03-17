@@ -24,11 +24,16 @@ function TaskCard({ task }: Props): JSX.Element {
     return 'type-icon ' + iconClassName;
   };
 
+  const createDescription = () => {
+    // TODO sanitize description
+    return { __html: task.description ? task.description : '' };
+  };
+
   return (
     <div className="task-card">
       <div className="title">{task.title}</div>
       <i className={getTaskTypeIcon()}></i>
-      <div className="description">{task.description}</div>
+      <div className="description" dangerouslySetInnerHTML={createDescription()}></div>
     </div>
   );
 }

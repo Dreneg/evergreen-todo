@@ -1,0 +1,117 @@
+.task-form {
+  padding: 0rem 4rem;
+}
+.task-form-row {
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-width: 50rem;
+  display: flex;
+}
+
+.form-title {
+  flex: 1 1 100%;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.save-button:hover {
+  background-color: var(--theme-mid-backgroud);
+  color: var(--theme-mid-foreground);
+}
+
+.task-form-row.description {
+  height: auto;
+  max-width: 50rem;
+  overflow: hidden;
+}
+
+.task-form-row input {
+  outline: none;
+}
+
+.task-form-row.type .button {
+  background-color: var(--theme-mid-backgroud);
+  color: var(--theme-mid-foreground);
+  border: none;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 5rem;
+}
+
+.task-form-row.type .button.selected,
+.task-form-row.type .button:hover {
+
+  background-color: var(--theme-light-backgroud);
+  color: var(--theme-light-foreground);
+}
+
+.task-form-row.state .state-select select {
+  appearance: none;
+  background-color: white;
+  border: 1px solid var(--theme-mid-backgroud);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: 1.4rem;
+  width: 100%;
+  padding: 0.3rem;
+  outline: none;
+  user-select: none;
+}
+
+.task-form-row.state .state-select {
+  position: relative;
+}
+
+.task-form-row.state .state-select::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--theme-mid-backgroud);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  position: absolute;
+  right: 0.4rem;
+  top: 0.8rem;
+}
+
+.type-button-group, .state-select {
+  display: inline-block;
+}
+
+.type-button-group, .form-input-field {
+  flex-grow: 5;
+  flex-shrink: 5;
+  max-width: 40rem;
+  height: 2rem;
+}
+
+.input-caption {
+  display: inline-block;
+  min-width: 10rem;
+  max-width: 10rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: larger;
+}
+
+.save-button {
+  background-color: var(--theme-light-backgroud);
+  color: var(--theme-light-foreground);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 6rem;
+  flex-basis: 6rem;
+}
+

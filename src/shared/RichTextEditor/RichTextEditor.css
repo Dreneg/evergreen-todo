@@ -1,0 +1,27 @@
+.ql-container {
+  height: 16rem;
+  overflow: auto;
+}
+
+.ql-toolbar {
+  background-color: var(--theme-light-backgroud);
+}
+
+.ql-editor {
+  background-color: #FAFAFA;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 7px;
+}
+
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+  height: 20px;
+  padding: 2px 4px;
+  width: 22px;
+  outline: none;
+}
+
+.ql-snow .ql-picker .ql-picker-label{
+  outline: none;
+}
