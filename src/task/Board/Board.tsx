@@ -14,7 +14,7 @@ function Board(): JSX.Element {
   };
 
   return (
-    <div className="board d-flex h-100 w-100">
+    <div className="board d-flex w-100">
       <div className="todo-column column flex-grow-1 flex-shrink-0 align-content-stretch">
         <div className="column-caption h4 text-center mx-3 p-1">Todo</div>
         <div className="tasks d-flex flex-wrap justify-content-center">{renderTasks(todoTasks)}</div>

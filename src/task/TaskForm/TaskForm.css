@@ -11,6 +11,8 @@
   margin-bottom: 2rem;
   max-width: 50rem;
   display: flex;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #a1a1a1;
 }
 
 .form-title {
@@ -19,6 +21,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  display: inline-block;
 }
 
 .save-button:hover {
@@ -108,7 +111,7 @@
   background-color: var(--theme-light-backgroud);
   color: var(--theme-light-foreground);
   border: none;
-  padding: 0.6rem 1.4rem;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
   cursor: pointer;
   width: 6rem;
